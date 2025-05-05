@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva de Produtos - Tech Food</title>
+  <link rel="stylesheet" href="css/reserva.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #d40000;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .text-logo {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .tech {
+      font-weight: bold;
+    }
+
+    .food {
+      font-weight: lighter;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      color: #d40000;
+      margin-bottom: 40px;
+    }
+
+    .estabelecimentos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .titulo-estab {
+      background-color: #d40000;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .produto-img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .seta {
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 10px;
+      user-select: none;
+    }
+
+    .navegacao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn-reservar {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #d40000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-reservar:hover {
+      background-color: #b30000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="circle"></div>
+      <div class="text-logo">
+        <span class="tech">TECH</span><br/>
+        <span class="food">FOOD</span>
+      </div>
+    </div>
+    <nav>
+      <a href="home.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <h1>Escolha seus produtos</h1>
+
+  <div class="estabelecimentos" id="estabelecimentos"></div>
+
+  <button class="btn-reservar" onclick="confirmarSelecao()">Reservar Alimentos</button>
+
+  <script>
+    const estabelecimentos = [
+      { nome: "Sacolão do Zé" },
+      { nome: "Hortfruit da Mara" },
+      { nome: "ABC Aimores" },
+      { nome: "Mercado Plus" }
+    ];
+
+    const produtos = [
+      { nome: "Laranja", imagem: "https://img.icons8.com/color/96/orange.png", emoji: "🍊" },
+      { nome: "Maçã", imagem: "https://img.icons8.com/color/96/apple.png", emoji: "🍎" },
+      { nome: "Verduras", imagem: "https://img.icons8.com/color/96/lettuce.png", emoji: "🥬" },
+      { nome: "Tomate", imagem: "https://img.icons8.com/color/96/tomato.png", emoji: "🍅" },
+      { nome: "Nada", imagem: "https://img.icons8.com/ios/96/no.png", emoji: "❌" }
+    ];
+
+    const selecoes = new Array(estabelecimentos.length).fill(0);
+
+    const container = document.getElementById("estabelecimentos");
+
+    estabelecimentos.forEach((estab, index) => {
+      const box = document.createElement("div");
+      box.className = "box";
+
+      box.innerHTML = `
+        <div class="titulo-estab">${estab.nome}</div>
+        <img class="produto-img" id="img-${index}" src="${produtos[0].imagem}" alt="produto">
+        <p id="nome-${index}">${produtos[0].nome}</p>
+        <div class="navegacao">
+          <span class="seta" onclick="mudarProduto(${index}, -1)">&#9664;</span>
+          <span class="seta" onclick="mudarProduto(${index}, 1)">&#9654;</span>
+        </div>
+      `;
+
+      container.appendChild(box);
+    });
+
+    function mudarProduto(estabIndex, direcao) {
+      selecoes[estabIndex] = (selecoes[estabIndex] + direcao + produtos.length) % produtos.length;
+      document.getElementById(`img-${estabIndex}`).src = produtos[selecoes[estabIndex]].imagem;
+      document.getElementById(`nome-${estabIndex}`).textContent = produtos[selecoes[estabIndex]].nome;
+    }
+
+    function confirmarSelecao() {
+      const reservaFinal = selecoes.map(index => produtos[index]);
+      localStorage.setItem("reservaProdutos", JSON.stringify(reservaFinal));
+      window.location.href = "confirmar-reserva.html";
+    }
+  </script>
+
+</body>
+</html>
+

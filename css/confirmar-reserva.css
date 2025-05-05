@@ -1,0 +1,119 @@
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #d40000;
+    color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .text-logo .tech {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .text-logo .food {
+    font-size: 14px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Conteúdo */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to bottom, #fff6f6, #ffecec);
+  }
+  
+  h1 {
+    color: #d40000;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .quadro-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+  }
+  
+  .produto-quadro {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px solid #d40000;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.2s;
+  }
+  
+  .produto-quadro:hover {
+    transform: scale(1.05);
+    border-color: #a00000;
+  }
+  
+  .emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-confirmar {
+    margin-top: 30px;
+    padding: 12px 26px;
+    background-color: #d40000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-confirmar:hover {
+    background-color: #a00000;
+  }
+  
+  .mensagem {
+    margin-top: 25px;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  

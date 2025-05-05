@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmar Reserva</title>
+  <link rel="stylesheet" href="css/confirmar-reserva.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d40000;
+    }
+
+    .quadro-produtos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .produto-quadro {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .produto-quadro img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .btn-confirmar {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #d40000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .mensagem {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="circle"></div>
+      <div class="text-logo">
+        <span class="tech">TECH</span><br/>
+        <span class="food">FOOD</span>
+      </div>
+    </div>
+    <nav>
+      <a href="home.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Confirmação de Reserva</h1>
+    <p>Veja abaixo os produtos selecionados:</p>
+
+    <div class="quadro-produtos" id="quadroProdutos"></div>
+
+    <button class="btn-confirmar" onclick="confirmarReserva()">Confirmar</button>
+
+    <p class="mensagem" id="mensagemConfirmacao"></p>
+  </main>
+
+  <script>
+    function carregarProdutos() {
+      const selecoes = JSON.parse(localStorage.getItem("reservaProdutos")) || [];
+      const quadro = document.getElementById("quadroProdutos");
+  
+      selecoes.forEach(produto => {
+        const div = document.createElement("div");
+        div.className = "produto-quadro";
+        div.innerHTML = `
+          <img src="${produto.imagem}" alt="${produto.nome}">
+          <span>${produto.nome}</span>
+        `;
+        quadro.appendChild(div);
+      });
+    }
+  
+    function confirmarReserva() {
+      document.getElementById("mensagemConfirmacao").textContent = "✅ Pedido Confirmado!";
+    }
+  
+    window.onload = carregarProdutos;
+  </script>
+  
+
+</body>
+</html>

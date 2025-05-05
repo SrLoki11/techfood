@@ -1,0 +1,131 @@
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #d40000;
+    color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .text-logo .tech {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .text-logo .food {
+    font-size: 14px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Conteúdo da página */
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #d40000;
+    margin-bottom: 40px;
+  }
+  
+  .estabelecimentos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.03);
+  }
+  
+  .titulo-estab {
+    background-color: #d40000;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .produto-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .seta {
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+    user-select: none;
+    color: #333;
+  }
+  
+  .seta:hover {
+    color: #d40000;
+  }
+  
+  .navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-reservar {
+    margin-top: 40px;
+    padding: 12px 24px;
+    background-color: #d40000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #a00000;
+  }
+  
+  
