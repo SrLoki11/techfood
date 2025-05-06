@@ -1,112 +1,111 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f44336;
-    padding: 20px 40px;
-    color: white;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .circle {
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .text-logo .tech {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .text-logo .food {
-    font-size: 14px;
-    font-weight: lighter;
-  }
-  
-  nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .titulo {
-    font-size: 36px;
-    color: #f44336;
-    margin-bottom: 40px;
-  }
-  
-  .blocos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-  
-  .bloco {
-    width: 250px;
-    background-color: #f8f8f8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .bloco:hover {
-    transform: translateY(-5px);
-  }
-  
-  .bloco img {
-    width: 80px;
-    margin-bottom: 20px;
-  }
-  
-  .bloco h2 {
-    color: #f44336;
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-  
-  .bloco p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .blocos {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .link-bloco {
-    text-decoration: none;
-    color: inherit;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f44336;
+  padding: 20px 40px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text-logo .tech {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text-logo .food {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 36px;
+  color: #f44336;
+  margin-bottom: 40px;
+}
+
+.blocos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.bloco {
+  width: 250px;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
+}
+
+.bloco img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.bloco h2 {
+  color: #f44336;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.bloco p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .blocos {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  
+}
+
+.link-bloco {
+  text-decoration: none;
+  color: inherit;
+}
+

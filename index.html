@@ -21,14 +21,15 @@
   </header>
 
   <main>
-    <h1>Portal Tech Food</h1>
+    <h1>Portal <span class="highlight">Tech Food</span></h1>
     <p class="subtitle">Acesse e faça a diferença</p>
-
-    <div class="login-button">
-      <a href="home.html">
-        <button>Entrar</button>
-      </a>
-    </div>
+  
+    <form action="home.html" method="get">
+      <input type="text" name="nome" placeholder="Nome do usuário" required />
+      <div class="login-button">
+        <button type="submit">Entrar</button>
+      </div>
+    </form>
   </main>
 
   <script src="js/login.js"></script>
