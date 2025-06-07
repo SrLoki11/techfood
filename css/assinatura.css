@@ -57,64 +57,102 @@ main {
 .titulo {
   font-size: 36px;
   color: #f44336;
-  margin-bottom: 40px;
-}
-
-.blocos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.bloco {
-  width: 250px;
-  background-color: #f8f8f8;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.bloco:hover {
-  transform: translateY(-5px);
-}
-
-.bloco img {
-  width: 80px;
   margin-bottom: 20px;
 }
 
-.bloco h2 {
-  color: #f44336;
-  margin-bottom: 10px;
-  font-size: 22px;
+.subtexto {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
-.bloco p {
-  font-size: 16px;
+.planos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.plano {
+  border: 2px solid #f44336;
+  border-radius: 10px;
+  padding: 30px 20px;
+  width: 280px;
+  background-color: #fff5f5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.plano:hover {
+  transform: translateY(-5px);
+}
+
+.plano h2 {
+  font-size: 24px;
+  color: #f44336;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-assinar {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn-assinar:hover {
+  background-color: #d7372c;
+}
+
+.termos {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.termos a {
+  color: #f44336;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  font-size: 15px;
   color: #555;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+.footer-links {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #f44336;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .blocos {
+  .planos {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.link-bloco {
-  text-decoration: none;
-  color: inherit;
-}
-
-.bloco-assinatura {
-  cursor: pointer;
-  background-color: #f8f8f8;
-}
-
-.bloco-assinatura:hover {
-  background-color: #ffeaea;
-  transform: translateY(-5px);
 }
